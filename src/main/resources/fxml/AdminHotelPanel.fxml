@@ -1,0 +1,859 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import com.application.util.masking.MaskField?>
+<AnchorPane id="AnchorPane" prefHeight="900.0" prefWidth="1464.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.controller.output.ui.AdministratorView">
+   <children>
+      <AnchorPane layoutX="-2.0" prefHeight="902.0" prefWidth="469.0" style="-fx-background-color: #0598FF;">
+         <children>
+            <Text fill="WHITE" layoutX="91.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Great Retreat">
+               <font>
+                  <Font name="Noto Sans Bold" size="36.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="134.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Golden Gate" wrappingWidth="221.115234375">
+               <font>
+                  <Font name="Noto Sans Bold" size="36.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="181.0" fitWidth="181.0" layoutX="124.0" layoutY="14.0">
+               <image>
+                  <Image url="@../images/hotel-svgrepo-com.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-text-alignment: center;" text="Добро пожаловать" wrappingWidth="464.00000000000006">
+               <font>
+                  <Font name="Noto Sans Bold" size="24.0" />
+               </font>
+            </Text>
+            <Text fx:id="username" fill="WHITE" layoutX="5.0" layoutY="343.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-text-alignment: center;" wrappingWidth="464.00000000000006">
+               <font>
+                  <Font name="Noto Sans Bold" size="24.0" />
+               </font>
+            </Text>
+            <Button alignment="TOP_LEFT" layoutX="59.0" layoutY="405.0" mnemonicParsing="false" onAction="#mainButtonClick" prefHeight="55.0" prefWidth="391.0" style="-fx-background-color: transparent;" text="Главная" textFill="WHITE">
+               <font>
+                  <Font name="Noto Sans Bold" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button alignment="TOP_LEFT" layoutX="59.0" layoutY="460.0" mnemonicParsing="false" onAction="#bookingButtonClick" prefHeight="55.0" prefWidth="390.0" style="-fx-background-color: transparent;" text="Бронирование" textFill="WHITE">
+               <font>
+                  <Font name="Noto Sans Bold" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button alignment="TOP_LEFT" layoutX="59.0" layoutY="515.0" mnemonicParsing="false" onAction="#clientButtonClick" prefHeight="55.0" prefWidth="385.0" style="-fx-background-color: transparent;" text="Клиенты" textFill="WHITE">
+               <font>
+                  <Font name="Noto Sans Bold" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button alignment="TOP_LEFT" layoutX="59.0" layoutY="570.0" mnemonicParsing="false" onAction="#roomButtonClick" prefHeight="53.0" prefWidth="383.0" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px;" text="Номера" textFill="WHITE">
+               <font>
+                  <Font name="Noto Sans Bold" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button alignment="TOP_LEFT" layoutX="58.0" layoutY="625.0" mnemonicParsing="false" onAction="#kidsButtonClick" prefHeight="53.0" prefWidth="402.0" style="-fx-background-color: transparent;" text="Дети" textFill="WHITE">
+               <font>
+                  <Font name="Noto Sans Bold" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="41.0" layoutY="471.0">
+               <image>
+                  <Image url="@../images/room-key-access-svgrepo-com%20(1).png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="41.0" layoutY="526.0">
+               <image>
+                  <Image url="@../images/client-profile-svgrepo-com.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="41.0" layoutY="581.0">
+               <image>
+                  <Image url="@../images/room-svgrepo-com.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="43.0" layoutY="415.0">
+               <image>
+                  <Image url="@../images/front-page-svgrepo-com.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="40.0" layoutY="636.0">
+               <image>
+                  <Image url="@../images/kids-couple-svgrepo-com.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Pane fx:id="mainPane" layoutX="467.0" layoutY="27.0" prefHeight="875.0" prefWidth="1000.0">
+         <children>
+            <Pane layoutX="141.0" layoutY="182.0" prefHeight="202.0" prefWidth="165.0" style="-fx-border-color: black; -fx-border-radius: 16px;">
+               <children>
+                  <Text fill="#0598ff" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Броней" textAlignment="CENTER" wrappingWidth="165.0">
+                     <font>
+                        <Font name="Noto Sans Bold" size="24.0" />
+                     </font>
+                  </Text>
+                  <ProgressBar fx:id="Occupied" layoutX="9.0" layoutY="161.0" prefHeight="18.0" prefWidth="147.0" progress="0.0" />
+                  <Text fx:id="activeBooking" fill="#0598ff" layoutX="9.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="147.0">
+                     <font>
+                        <Font name="Noto Sans Bold" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="allTimeBooking" fill="#0598ff" layoutX="9.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="147.0">
+                     <font>
+                        <Font name="Noto Sans Bold" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#0598ff" layoutX="9.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Загруженность" textAlignment="CENTER" wrappingWidth="147.0">
+                     <font>
+                        <Font name="Noto Sans Bold" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane layoutX="444.0" layoutY="182.0" prefHeight="202.0" prefWidth="165.0" style="-fx-border-color: black; -fx-border-radius: 16px;">
+               <children>
+                  <Text fill="#0598ff" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Клиентов" textAlignment="CENTER" wrappingWidth="165.0">
+                     <font>
+                        <Font name="Noto Sans Bold" size="24.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="clientsNow" fill="#0598ff" layoutX="9.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="147.0">
+                     <font>
+                        <Font name="Noto Sans Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="allTimeClients" fill="#0598ff" layoutX="9.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="147.0">
+                     <font>
+                        <Font name="Noto Sans Bold" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane layoutX="747.0" layoutY="182.0" prefHeight="202.0" prefWidth="165.0" style="-fx-border-color: black; -fx-border-radius: 16px;">
+               <children>
+                  <Text fill="#0598ff" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Номеров" textAlignment="CENTER" wrappingWidth="165.0">
+                     <font>
+                        <Font name="Noto Sans Bold" size="24.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="roomTotal" fill="#0598ff" layoutX="9.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="147.0">
+                     <font>
+                        <Font name="Noto Sans Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="freeRoom" fill="#0598ff" layoutX="9.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="147.0">
+                     <font>
+                        <Font name="Noto Sans Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="occupiedRoom" fill="#0598ff" layoutX="9.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" textAlignment="CENTER" wrappingWidth="147.0">
+                     <font>
+                        <Font name="Noto Sans Bold" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Text fill="#0598ff" layoutX="100.0" layoutY="481.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Статистика" textAlignment="CENTER" wrappingWidth="329.0">
+               <font>
+                  <Font name="Noto Sans Bold" size="48.0" />
+               </font>
+            </Text>
+            <Text fx:id="todayBooking" fill="#0598ff" layoutX="91.0" layoutY="558.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Броней за сегодня" wrappingWidth="665.05859375">
+               <font>
+                  <Font name="Noto Sans Bold" size="24.0" />
+               </font>
+            </Text>
+            <Text fx:id="earnedToday" fill="#0598ff" layoutX="94.0" layoutY="620.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Заработано" wrappingWidth="658.05859375">
+               <font>
+                  <Font name="Noto Sans Bold" size="24.0" />
+               </font>
+            </Text>
+            <Text fill="#0598ff" layoutX="6.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Главная" textAlignment="CENTER" wrappingWidth="824.0">
+               <font>
+                  <Font name="Noto Sans Bold" size="48.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane fx:id="bookingPane" layoutX="469.0" layoutY="41.0" prefHeight="748.0" prefWidth="1000.0" visible="false">
+         <children>
+            <ScrollPane prefHeight="857.0" prefWidth="1002.0">
+               <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1500.0" prefWidth="985.0">
+                     <children>
+                        <Text fill="#0598ff" layoutX="-6.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Бронирование" textAlignment="CENTER" wrappingWidth="991.0">
+                           <font>
+                              <Font name="Noto Sans Bold" size="48.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="searchBookingInHotel" layoutX="46.0" layoutY="175.0" onKeyTyped="#buttonSearchMouseClickedSecond" prefHeight="32.0" prefWidth="923.0" promptText="Поиск" style="-fx-background-color: transparent; -fx-border-color: #0598FF; -fx-border-width: 0px 0px 2px 0px;">
+                           <font>
+                              <Font name="Noto Sans Bold" size="14.0" />
+                           </font>
+                        </TextField>
+                        <ImageView fitHeight="33.0" fitWidth="29.0" layoutX="14.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/search-svgrepo-com.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <TableView fx:id="roomTable" layoutX="39.0" layoutY="1121.0" onMouseClicked="#getSelectedIdRoom" prefHeight="200.0" prefWidth="904.0" />
+                        <ComboBox fx:id="clientsCombobox" editable="true" layoutX="40.0" layoutY="486.0" prefHeight="37.0" prefWidth="317.0" style="-fx-background-color: transparent; -fx-border-color: #0598FF; -fx-border-width: 0px 0px 2px 0px;" stylesheets="@../CSS/combobox.css" />
+                        <DatePicker id="checkInDateBooking" fx:id="checkInDateBooking" layoutX="367.0" layoutY="490.0" onAction="#chooseDate" prefHeight="37.0" prefWidth="195.0" promptText="Дата заезда" showWeekNumbers="true" style="-fx-background-color: transparent; -fx-border-color: #0598FF; -fx-border-width: 0px 0px 2px 0px;" />
+                        <DatePicker fx:id="departureDate" layoutX="577.0" layoutY="490.0" prefHeight="37.0" prefWidth="195.0" promptText="Дата выезда" style="-fx-background-color: transparent; -fx-border-color: #0598FF; -fx-border-width: 0px 0px 2px 0px;" />
+                        <TextArea fx:id="bookingDescription" layoutX="40.0" layoutY="594.0" prefHeight="239.0" prefWidth="443.0">
+                           <font>
+                              <Font name="Noto Sans" size="18.0" />
+                           </font>
+                        </TextArea>
+                        <Button layoutX="601.0" layoutY="1380.0" mnemonicParsing="false" onAction="#bookRoom" prefHeight="37.0" prefWidth="171.0" style="-fx-background-color: #0598FF;" text="Забронировать" textFill="WHITE">
+                           <font>
+                              <Font name="Noto Sans" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="785.0" layoutY="1380.0" mnemonicParsing="false" onAction="#changeBookingRoom" prefHeight="37.0" prefWidth="171.0" style="-fx-background-color: #0598FF;" text="Изменить" textFill="WHITE">
+                           <font>
+                              <Font name="Noto Sans" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="785.0" layoutY="1434.0" mnemonicParsing="false" onAction="#cancelBooking" prefHeight="37.0" prefWidth="171.0" style="-fx-background-color: #0598FF;" text="Отменить" textFill="WHITE">
+                           <font>
+                              <Font name="Noto Sans" size="18.0" />
+                           </font>
+                        </Button>
+                        <Text fill="#0598ff" layoutX="40.0" layoutY="1107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Номера" wrappingWidth="221.115234375">
+                           <font>
+                              <Font name="Noto Sans Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <TableView fx:id="bookingTable" layoutX="43.0" layoutY="225.0" onMouseClicked="#getSelectedBooking" prefHeight="200.0" prefWidth="943.0" />
+                        <Text fill="#0598ff" layoutX="43.0" layoutY="477.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Клиент" wrappingWidth="99.0">
+                           <font>
+                              <Font name="Noto Sans Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#0598ff" layoutX="367.0" layoutY="471.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Дата заезда" wrappingWidth="196.0">
+                           <font>
+                              <Font name="Noto Sans Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#0598ff" layoutX="577.0" layoutY="470.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Дата выезда" wrappingWidth="196.0">
+                           <font>
+                              <Font name="Noto Sans Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="searchRoomsBooking" layoutX="52.0" layoutY="1041.0" onKeyTyped="#buttonSearchMouseClicked" prefHeight="32.0" prefWidth="733.0" promptText="Поиск" style="-fx-background-color: transparent; -fx-border-color: #0598FF; -fx-border-width: 0px 0px 2px 0px;">
+                           <font>
+                              <Font name="Noto Sans Bold" size="14.0" />
+                           </font>
+                        </TextField>
+                        <ImageView fitHeight="33.0" fitWidth="29.0" layoutX="20.0" layoutY="1043.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/search-svgrepo-com.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Text fill="#0598ff" layoutX="43.0" layoutY="572.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Описание" wrappingWidth="128.0">
+                           <font>
+                              <Font name="Noto Sans Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="priceBooking" fill="#0598ff" layoutX="43.0" layoutY="824.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="749.0">
+                           <font>
+                              <Font name="Noto Sans Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <ComboBox fx:id="additionalServiceCombobox" layoutX="515.0" layoutY="605.0" prefHeight="41.0" prefWidth="311.0" style="-fx-background-color: transparent; -fx-border-color: #0598FF; -fx-border-width: 0px 0px 2px 0px;" stylesheets="@../CSS/combobox.css" />
+                        <Text fill="#0598ff" layoutX="519.0" layoutY="594.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Дополнительный сервис" wrappingWidth="428.0">
+                           <font>
+                              <Font name="Noto Sans Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="515.0" layoutY="650.0" mnemonicParsing="false" onAction="#addAdditionalService" prefHeight="37.0" prefWidth="171.0" style="-fx-background-color: #0598FF;" text="Добавить" textFill="WHITE">
+                           <font>
+                              <Font name="Noto Sans" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="520.0" layoutY="812.0" mnemonicParsing="false" onAction="#deleteAdditionalService" prefHeight="37.0" prefWidth="171.0" style="-fx-background-color: #0598FF;" text="Удалить" textFill="WHITE">
+                           <font>
+                              <Font name="Noto Sans" size="18.0" />
+                           </font>
+                        </Button>
+                        <ComboBox fx:id="selectedAdditionalServiceCombobox" layoutX="515.0" layoutY="760.0" prefHeight="41.0" prefWidth="311.0" style="-fx-background-color: transparent; -fx-border-color: #0598FF; -fx-border-width: 0px 0px 2px 0px;" stylesheets="@../CSS/combobox.css" />
+                        <Text fill="#0598ff" layoutX="519.0" layoutY="735.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Выбранный сервис" wrappingWidth="385.0">
+                           <font>
+                              <Font name="Noto Sans Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <ComboBox fx:id="bookingTypeComboBox" layoutX="43.0" layoutY="886.0" prefHeight="41.0" prefWidth="311.0" style="-fx-background-color: transparent; -fx-border-color: #0598FF; -fx-border-width: 0px 0px 2px 0px;" stylesheets="@../CSS/combobox.css" />
+                        <Text fill="#0598ff" layoutX="43.0" layoutY="877.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Тип бронирования" wrappingWidth="299.0">
+                           <font>
+                              <Font name="Noto Sans Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="bookingAmount" fill="#0598ff" layoutX="53.0" layoutY="1361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Сумма бронирования:" wrappingWidth="803.0">
+                           <font>
+                              <Font name="Noto Sans Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <ComboBox fx:id="filterRoomPlaces" layoutX="52.0" layoutY="988.0" prefHeight="41.0" prefWidth="258.0" promptText="Мест в номере" style="-fx-background-color: transparent; -fx-border-color: #0598FF; -fx-border-width: 0px 0px 2px 0px;" stylesheets="@../CSS/combobox.css" />
+                        <ComboBox fx:id="filterRoomType" layoutX="325.0" layoutY="988.0" prefHeight="41.0" prefWidth="258.0" promptText="Тип номера" style="-fx-background-color: transparent; -fx-border-color: #0598FF; -fx-border-width: 0px 0px 2px 0px;" stylesheets="@../CSS/combobox.css" />
+                        <Button layoutX="57.0" layoutY="1400.0" mnemonicParsing="false" onAction="#calculateAmount" prefHeight="37.0" prefWidth="171.0" style="-fx-background-color: #0598FF;" text="Рассчитать" textFill="WHITE">
+                           <font>
+                              <Font name="Noto Sans" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="601.0" layoutY="1434.0" mnemonicParsing="false" onAction="#finishedBooking" prefHeight="37.0" prefWidth="171.0" style="-fx-background-color: #0598FF;" text="Завершен" textFill="WHITE">
+                           <font>
+                              <Font name="Noto Sans" size="18.0" />
+                           </font>
+                        </Button>
+                        <Text fill="#0598ff" layoutX="52.0" layoutY="972.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Выбор номера" wrappingWidth="335.0">
+                           <font>
+                              <Font name="Noto Sans Bold" size="24.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </Pane>
+      <Pane fx:id="ClientsPane" layoutX="463.0" layoutY="41.0" prefHeight="860.0" prefWidth="1000.0" visible="false">
+         <children>
+            <ImageView fitHeight="33.0" fitWidth="29.0" layoutX="48.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/search-svgrepo-com.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <MaskField mask="+D(DDD)DDD-DD-DD" fx:id="phoneNumberClients" layoutX="733.0" layoutY="437.0" promptText="+_(___) ___-__-__" style="-fx-background-color: transparent; -fx-border-color: #0598FF; -fx-border-width: 0px 0px 2px 0px;">
+               <font>
+                  <Font name="Noto Sans Bold" size="18.0" />
+               </font>
+            </MaskField>
+            <Text fill="#0598ff" layoutX="8.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Клиенты" textAlignment="CENTER" wrappingWidth="998.0">
+               <font>
+                  <Font name="Noto Sans Bold" size="48.0" />
+               </font>
+            </Text>
+            <Button layoutX="126.0" layoutY="763.0" mnemonicParsing="false" onAction="#addClient" prefHeight="37.0" prefWidth="187.0" style="-fx-background-color: #0598FF;" text="Добавить" textFill="WHITE">
+               <font>
+                  <Font name="Noto Sans Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="413.0" layoutY="763.0" mnemonicParsing="false" onAction="#changeClient" prefHeight="37.0" prefWidth="187.0" style="-fx-background-color: #0598FF;" text="Изменить" textFill="WHITE">
+               <font>
+                  <Font name="Noto Sans Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="700.0" layoutY="763.0" mnemonicParsing="false" onAction="#deleteClient" prefHeight="37.0" prefWidth="187.0" style="-fx-background-color: #0598FF;" text="Удалить" textFill="WHITE">
+               <font>
+                  <Font name="Noto Sans Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TextField fx:id="surnameClientField" layoutX="29.0" layoutY="437.0" style="-fx-background-color: transparent; -fx-border-color: #0598FF; -fx-border-width: 0px 0px 2px 0px;">
+               <font>
+                  <Font name="Noto Sans Bold" size="18.0" />
+               </font>
+            </TextField>
+            <Text fill="#0598ff" layoutX="29.0" layoutY="428.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Фамилия" wrappingWidth="138.0">
+               <font>
+                  <Font name="Noto Sans Bold" size="24.0" />
+               </font>
+            </Text>
+            <TextField fx:id="nameClientField" layoutX="265.0" layoutY="437.0" style="-fx-background-color: transparent; -fx-border-color: #0598FF; -fx-border-width: 0px 0px 2px 0px;">
+               <font>
+                  <Font name="Noto Sans Bold" size="18.0" />
+               </font>
+            </TextField>
+            <Text fill="#0598ff" layoutX="265.0" layoutY="428.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Имя" wrappingWidth="138.0">
+               <font>
+                  <Font name="Noto Sans Bold" size="24.0" />
+               </font>
+            </Text>
+            <TextField fx:id="patronymicClientField" layoutX="504.0" layoutY="437.0" style="-fx-background-color: transparent; -fx-border-color: #0598FF; -fx-border-width: 0px 0px 2px 0px;">
+               <font>
+                  <Font name="Noto Sans Bold" size="18.0" />
+               </font>
+            </TextField>
+            <Text fill="#0598ff" layoutX="504.0" layoutY="428.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Отчество" wrappingWidth="138.0">
+               <font>
+                  <Font name="Noto Sans Bold" size="24.0" />
+               </font>
+            </Text>
+            <Text fill="#0598ff" layoutX="733.0" layoutY="428.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Номер телефона" wrappingWidth="230.828125">
+               <font>
+                  <Font name="Noto Sans Bold" size="24.0" />
+               </font>
+            </Text>
+            <TextField fx:id="placeOfResidenceField" layoutX="32.0" layoutY="681.0" prefHeight="41.0" prefWidth="943.0" style="-fx-background-color: transparent; -fx-border-color: #0598FF; -fx-border-width: 0px 0px 2px 0px;">
+               <font>
+                  <Font name="Noto Sans Bold" size="18.0" />
+               </font>
+            </TextField>
+            <Text fill="#0598ff" layoutX="32.0" layoutY="673.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Прописка" wrappingWidth="230.828125">
+               <font>
+                  <Font name="Noto Sans Bold" size="24.0" />
+               </font>
+            </Text>
+            <MaskField mask="DDDD" fx:id="serialPassportField" layoutX="267.0" layoutY="520.0" style="-fx-background-color: transparent; -fx-border-color: #0598FF; -fx-border-width: 0px 0px 2px 0px;">
+               <font>
+                  <Font name="Noto Sans Bold" size="18.0" />
+               </font>
+            </MaskField>
+            <Text fill="#0598ff" layoutX="267.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Серия паспорта" wrappingWidth="230.828125">
+               <font>
+                  <Font name="Noto Sans Bold" size="24.0" />
+               </font>
+            </Text>
+            <MaskField mask="DDDDDD" fx:id="numberPassportField" layoutX="504.0" layoutY="520.0" style="-fx-background-color: transparent; -fx-border-color: #0598FF; -fx-border-width: 0px 0px 2px 0px;">
+               <font>
+                  <Font name="Noto Sans Bold" size="18.0" />
+               </font>
+            </MaskField>
+            <Text fill="#0598ff" layoutX="504.0" layoutY="511.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Номер паспорта" wrappingWidth="230.828125">
+               <font>
+                  <Font name="Noto Sans Bold" size="24.0" />
+               </font>
+            </Text>
+            <TextField fx:id="issuedPasportField" layoutX="32.0" layoutY="600.0" prefHeight="41.0" prefWidth="943.0" style="-fx-background-color: transparent; -fx-border-color: #0598FF; -fx-border-width: 0px 0px 2px 0px;">
+               <font>
+                  <Font name="Noto Sans Bold" size="18.0" />
+               </font>
+            </TextField>
+            <Text fill="#0598ff" layoutX="32.0" layoutY="591.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Кем выдан" wrappingWidth="230.828125">
+               <font>
+                  <Font name="Noto Sans Bold" size="24.0" />
+               </font>
+            </Text>
+            <DatePicker fx:id="birthDateClientField" layoutX="25.0" layoutY="526.0" prefHeight="35.0" prefWidth="231.0" style="-fx-background-color: transparent; -fx-border-color: #0598FF; -fx-border-width: 0px 0px 2px 0px;" />
+            <Text fill="#0598ff" layoutX="26.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Дата рождения" wrappingWidth="230.828125">
+               <font>
+                  <Font name="Noto Sans Bold" size="24.0" />
+               </font>
+            </Text>
+            <DatePicker fx:id="dateIssueField" layoutX="733.0" layoutY="525.0" prefHeight="35.0" prefWidth="231.0" style="-fx-background-color: transparent; -fx-border-color: #0598FF; -fx-border-width: 0px 0px 2px 0px;" />
+            <Text fill="#0598ff" layoutX="733.0" layoutY="514.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Дата выдачи" wrappingWidth="230.828125">
+               <font>
+                  <Font name="Noto Sans Bold" size="24.0" />
+               </font>
+            </Text>
+            <TableView fx:id="clientTable" layoutX="77.0" layoutY="139.0" onMouseClicked="#getSelectedClient" prefHeight="248.0" prefWidth="850.0" />
+            <TextField fx:id="searchClientField" layoutX="77.0" layoutY="93.0" prefHeight="41.0" prefWidth="850.0" style="-fx-background-color: transparent; -fx-border-color: #0598FF; -fx-border-width: 0px 0px 2px 0px;">
+               <font>
+                  <Font name="Noto Sans Bold" size="18.0" />
+               </font>
+            </TextField>
+         </children></Pane>
+      <Pane fx:id="roomPane" layoutX="468.0" layoutY="43.0" prefHeight="857.0" prefWidth="1000.0" style="-fx-border-color: transparent;" visible="false">
+         <children>
+            <ScrollPane layoutX="-1.0" layoutY="8.0" prefHeight="857.0" prefWidth="1002.0" style="-fx-border-color: transparent;">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1500.0" prefWidth="985.0" style="-fx-border-color: transparent;">
+                     <children>
+                        <Text fill="#0598ff" layoutX="7.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Типы номеров и их номера" textAlignment="CENTER" wrappingWidth="1006.0">
+                           <font>
+                              <Font name="Noto Sans Bold" size="48.0" />
+                           </font>
+                        </Text>
+                        <TableView fx:id="roomTableRooms" layoutX="18.0" layoutY="106.0" onMouseClicked="#getRoomData" prefHeight="264.0" prefWidth="984.0" />
+                        <Button layoutX="32.0" layoutY="1308.0" onAction="#addRoom" prefHeight="37.0" prefWidth="187.0" style="-fx-background-color: #0598FF;" text="Добавить" textFill="WHITE">
+                           <font>
+                              <Font name="Noto Sans Bold" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button layoutX="244.0" layoutY="1308.0" onAction="#changeRoom" prefHeight="37.0" prefWidth="187.0" style="-fx-background-color: #0598FF;" text="Изменить" textFill="WHITE">
+                           <font>
+                              <Font name="Noto Sans Bold" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button layoutX="140.0" layoutY="1367.0" onAction="#deleteRoom" prefHeight="37.0" prefWidth="187.0" style="-fx-background-color: #0598FF;" text="Удалить" textFill="WHITE">
+                           <font>
+                              <Font name="Noto Sans Bold" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <TextArea fx:id="descriptionRoomField" layoutX="493.0" layoutY="451.0" prefHeight="159.0" prefWidth="482.0" style="-fx-border-width: 0px 0px 2px 0px; -fx-border-color: #0598FF;" />
+                        <TextField fx:id="areaField" layoutX="56.0" layoutY="451.0" prefHeight="41.0" prefWidth="165.0" promptText="__._" style="-fx-background-color: transparent; -fx-border-color: #0598FF; -fx-border-width: 0px 0px 2px 0px;">
+                           <font>
+                              <Font name="Noto Sans Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="priceField" layoutX="56.0" layoutY="530.0" prefHeight="41.0" prefWidth="165.0" style="-fx-background-color: transparent; -fx-border-color: #0598FF; -fx-border-width: 0px 0px 2px 0px;">
+                           <font>
+                              <Font name="Noto Sans Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Text fill="#0598ff" layoutX="56.0" layoutY="442.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Площадь" wrappingWidth="138.0">
+                           <font>
+                              <Font name="Noto Sans Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#0598ff" layoutX="56.0" layoutY="522.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Цена" wrappingWidth="138.0">
+                           <font>
+                              <Font name="Noto Sans Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#0598ff" layoutX="493.0" layoutY="429.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Описание" wrappingWidth="138.0">
+                           <font>
+                              <Font name="Noto Sans Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="numberOfRoom" layoutX="38.0" layoutY="1237.0" prefHeight="41.0" prefWidth="200.0" promptText="___" style="-fx-background-color: transparent; -fx-border-color: #0598FF; -fx-border-width: 0px 0px 2px 0px;">
+                           <font>
+                              <Font name="Noto Sans Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Text fill="#0598ff" layoutX="32.0" layoutY="1228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Номер комнаты" wrappingWidth="257.0">
+                           <font>
+                              <Font name="Noto Sans Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <ComboBox fx:id="roomTypeBox" layoutX="278.0" layoutY="1236.0" prefHeight="41.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-border-color: #0598FF; -fx-border-width: 0px 0px 2px 0px;" styleClass="combo-box" stylesheets="@../CSS/combobox.css" />
+                        <Text fill="#0598ff" layoutX="299.0" layoutY="1229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Тип номера" wrappingWidth="187.0">
+                           <font>
+                              <Font name="Noto Sans Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <CheckBox fx:id="tvCheckBox" layoutX="65.0" layoutY="642.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Телевизор" textFill="#0598ff">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="wifiCheckBox" layoutX="65.0" layoutY="682.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="WI-FI" textFill="#0598ff">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="minibarCheckBox" layoutX="65.0" layoutY="722.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Минибар" textFill="#0598ff">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="phoneCheckBox" layoutX="65.0" layoutY="762.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Телефон" textFill="#0598ff">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="teapotCheckBox" layoutX="65.0" layoutY="802.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Чайник" textFill="#0598ff">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="showerCheckBox" layoutX="300.0" layoutY="642.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Душевая кабина" textFill="#0598ff">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="bathCheckBox" layoutX="300.0" layoutY="682.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Ванная" textFill="#0598ff">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="conditionerCheckBox" layoutX="65.0" layoutY="882.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Кондиционер" textFill="#0598ff">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="dressingCheckBox" layoutX="300.0" layoutY="762.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Гардеробная" textFill="#0598ff">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="vaultCheckBox" layoutX="65.0" layoutY="842.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Сейф" textFill="#0598ff">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="viewOnCityCheckBox" layoutX="535.0" layoutY="682.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Вид на город" textFill="#0598ff">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="viewOnCourtyardCheckBox" layoutX="535.0" layoutY="642.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Вид на двор" textFill="#0598ff">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="hallCheckBox" layoutX="300.0" layoutY="722.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Гостинная" textFill="#0598ff">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="additionalBathRoomCheckBox" layoutX="300.0" layoutY="802.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Дополнительный санузел" textFill="#0598ff">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </CheckBox>
+                        <Text fill="#0598ff" layoutX="287.0" layoutY="523.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Название" wrappingWidth="164.99999999999977">
+                           <font>
+                              <Font name="Noto Sans Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="49.0" layoutY="944.0" onAction="#addRoomType" prefHeight="37.0" prefWidth="187.0" style="-fx-background-color: #0598FF;" text="Добавить" textFill="WHITE">
+                           <font>
+                              <Font name="Noto Sans Bold" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button layoutX="359.0" layoutY="944.0" onAction="#changeRoomType" prefHeight="37.0" prefWidth="187.0" style="-fx-background-color: #0598FF;" text="Изменить" textFill="WHITE">
+                           <font>
+                              <Font name="Noto Sans Bold" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button layoutX="674.0" layoutY="944.0" onAction="#deleteRoomType" prefHeight="37.0" prefWidth="187.0" style="-fx-background-color: #0598FF;" text="Удалить" textFill="WHITE">
+                           <font>
+                              <Font name="Noto Sans Bold" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <TextField fx:id="titleRoomType" layoutX="289.0" layoutY="530.0" prefHeight="41.0" prefWidth="165.0" style="-fx-background-color: transparent; -fx-border-color: #0598FF; -fx-border-width: 0px 0px 2px 0px;">
+                           <font>
+                              <Font name="Noto Sans Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="placesRoomType" layoutX="289.0" layoutY="453.0" prefHeight="41.0" prefWidth="165.0" style="-fx-background-color: transparent; -fx-border-color: #0598FF; -fx-border-width: 0px 0px 2px 0px;">
+                           <font>
+                              <Font name="Noto Sans Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Text fill="#0598ff" layoutY="1061.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Номера и сервис" textAlignment="CENTER" wrappingWidth="1006.0">
+                           <font>
+                              <Font name="Noto Sans Bold" size="48.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#0598ff" layoutX="289.0" layoutY="445.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Мест" wrappingWidth="164.99999999999977">
+                           <font>
+                              <Font name="Noto Sans Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <ComboBox fx:id="editRoomTypeBox" layoutX="38.0" layoutY="1143.0" prefHeight="41.0" prefWidth="438.0" style="-fx-background-color: transparent; -fx-border-color: #0598FF; -fx-border-width: 0px 0px 2px 0px;" styleClass="combo-box" stylesheets="@../CSS/combobox.css" />
+                        <Text fill="#0598ff" layoutX="56.0" layoutY="1116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Номер комнаты" wrappingWidth="355.0">
+                           <font>
+                              <Font name="Noto Sans Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <ComboBox fx:id="serviceRoomBox" layoutX="565.0" layoutY="1143.0" prefHeight="41.0" prefWidth="357.0" style="-fx-background-color: transparent; -fx-border-color: #0598FF; -fx-border-width: 0px 0px 2px 0px;" styleClass="combo-box" stylesheets="@../CSS/combobox.css" />
+                        <Text fill="#0598ff" layoutX="565.0" layoutY="1132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Сервис" wrappingWidth="181.00000000000003">
+                           <font>
+                              <Font name="Noto Sans Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#0598ff" layoutX="559.0" layoutY="1213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Название" wrappingWidth="164.99999999999977">
+                           <font>
+                              <Font name="Noto Sans Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="titleService" layoutX="561.0" layoutY="1220.0" prefHeight="41.0" prefWidth="165.0" style="-fx-background-color: transparent; -fx-border-color: #0598FF; -fx-border-width: 0px 0px 2px 0px;">
+                           <font>
+                              <Font name="Noto Sans Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="priceService" layoutX="769.0" layoutY="1220.0" prefHeight="41.0" prefWidth="165.0" style="-fx-background-color: transparent; -fx-border-color: #0598FF; -fx-border-width: 0px 0px 2px 0px;">
+                           <font>
+                              <Font name="Noto Sans Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Text fill="#0598ff" layoutX="769.0" layoutY="1213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Цена" wrappingWidth="164.99999999999977">
+                           <font>
+                              <Font name="Noto Sans Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="562.0" layoutY="1288.0" onAction="#addService" prefHeight="37.0" prefWidth="187.0" style="-fx-background-color: #0598FF;" text="Добавить" textFill="WHITE">
+                           <font>
+                              <Font name="Noto Sans Bold" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button layoutX="767.0" layoutY="1288.0" onAction="#changeService" prefHeight="37.0" prefWidth="187.0" style="-fx-background-color: #0598FF;" text="Изменить" textFill="WHITE">
+                           <font>
+                              <Font name="Noto Sans Bold" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button layoutX="663.0" layoutY="1347.0" onAction="#deleteService" prefHeight="37.0" prefWidth="187.0" style="-fx-background-color: #0598FF;" text="Удалить" textFill="WHITE">
+                           <font>
+                              <Font name="Noto Sans Bold" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+         </children></Pane>
+      <Pane fx:id="kidsPane" layoutX="469.0" layoutY="49.0" prefHeight="851.0" prefWidth="998.0" visible="false">
+         <children>
+            <Text fill="#0598ff" layoutX="6.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Дети" textAlignment="CENTER" wrappingWidth="997.9999999999998">
+               <font>
+                  <Font name="Noto Sans Bold" size="48.0" />
+               </font>
+            </Text>
+            <TableView fx:id="kidsTable" layoutX="14.0" layoutY="68.0" onMouseClicked="#getSelectedChild" prefHeight="272.0" prefWidth="977.0" />
+            <TextField fx:id="kidSurname" layoutX="23.0" layoutY="433.0" prefHeight="41.0" prefWidth="212.0" style="-fx-background-color: transparent; -fx-border-color: #0598FF; -fx-border-width: 0px 0px 2px 0px;">
+               <font>
+                  <Font name="Noto Sans Bold" size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="kidName" layoutX="284.0" layoutY="434.0" prefHeight="41.0" prefWidth="212.0" style="-fx-background-color: transparent; -fx-border-color: #0598FF; -fx-border-width: 0px 0px 2px 0px;">
+               <font>
+                  <Font name="Noto Sans Bold" size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="kidPatronymic" layoutX="513.0" layoutY="434.0" prefHeight="35.0" prefWidth="212.0" style="-fx-background-color: transparent; -fx-border-color: #0598FF; -fx-border-width: 0px 0px 2px 0px;">
+            <font>
+               <Font name="Noto Sans Bold" size="18.0" />
+            </font>
+            </TextField>
+            <DatePicker fx:id="kidDateBirth" layoutX="763.0" layoutY="440.0" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-border-color: #0598FF; -fx-border-width: 0px 0px 2px 0px;" />
+            <Text fill="#0598ff" layoutX="23.0" layoutY="415.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Фамилия" wrappingWidth="165.0">
+               <font>
+                  <Font name="Noto Sans Bold" size="24.0" />
+               </font>
+            </Text>
+            <Text fill="#0598ff" layoutX="284.0" layoutY="416.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Имя" wrappingWidth="165.0">
+               <font>
+                  <Font name="Noto Sans Bold" size="24.0" />
+               </font>
+            </Text>
+            <Text fill="#0598ff" layoutX="513.0" layoutY="416.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Отчество" wrappingWidth="165.0">
+               <font>
+                  <Font name="Noto Sans Bold" size="24.0" />
+               </font>
+            </Text>
+            <Text fill="#0598ff" layoutX="763.0" layoutY="426.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Дата рождения" visible="false" wrappingWidth="226.880859375">
+               <font>
+                  <Font name="Noto Sans Bold" size="24.0" />
+               </font>
+            </Text>
+            <ComboBox fx:id="parentsCombobox" layoutX="38.0" layoutY="635.0" prefHeight="41.0" prefWidth="299.0" style="-fx-background-color: transparent; -fx-border-color: #0598FF; -fx-border-width: 0px 0px 2px 0px;" styleClass="combo-box" stylesheets="@../CSS/combobox.css" />
+            <Text fill="#0598ff" layoutX="38.0" layoutY="623.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Родитель" wrappingWidth="200.0">
+               <font>
+                  <Font name="Noto Sans Bold" size="24.0" />
+               </font>
+            </Text>
+            <Button layoutX="38.0" layoutY="543.0" mnemonicParsing="false" onAction="#addKid" prefHeight="37.0" prefWidth="187.0" style="-fx-background-color: #0598FF;" text="Добавить" textFill="WHITE">
+               <font>
+                  <Font name="Noto Sans Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="279.0" layoutY="543.0" mnemonicParsing="false" onAction="#changeKid" prefHeight="37.0" prefWidth="187.0" style="-fx-background-color: #0598FF;" text="Изменить" textFill="WHITE">
+               <font>
+                  <Font name="Noto Sans Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="520.0" layoutY="543.0" mnemonicParsing="false" onAction="#deleteKid" prefHeight="37.0" prefWidth="187.0" style="-fx-background-color: #0598FF;" text="Удалить" textFill="WHITE">
+               <font>
+                  <Font name="Noto Sans Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="38.0" layoutY="723.0" mnemonicParsing="false" onAction="#addParentToChild" prefHeight="37.0" prefWidth="187.0" style="-fx-background-color: #0598FF;" text="Добавить" textFill="WHITE">
+               <font>
+                  <Font name="Noto Sans Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="279.0" layoutY="723.0" mnemonicParsing="false" onAction="#deleteParent" prefHeight="37.0" prefWidth="187.0" style="-fx-background-color: #0598FF;" text="Удалить" textFill="WHITE">
+               <font>
+                  <Font name="Noto Sans Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Text fx:id="parentsText" fill="#0598ff" layoutX="514.0" layoutY="632.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Родители" visible="false" wrappingWidth="200.0">
+               <font>
+                  <Font name="Noto Sans Bold" size="24.0" />
+               </font>
+            </Text>
+            <ListView fx:id="ListOfParents" layoutX="514.0" layoutY="639.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent;" />
+         </children></Pane>
+      <ImageView fitHeight="29.0" fitWidth="31.0" layoutX="1416.0" layoutY="12.0" onMouseClicked="#exit" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/close-md-svgrepo-com%20(1).png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

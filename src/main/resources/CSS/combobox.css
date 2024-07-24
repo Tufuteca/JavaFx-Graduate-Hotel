@@ -1,0 +1,17 @@
+/* Пример стилей для ComboBox */
+.combo-box {
+    -fx-font-family: "Noto Sans";
+    -fx-font-size: 18.0;
+    -fx-text-fill: white; /* Устанавливаем белый цвет текста по умолчанию */
+}
+
+/* Стили при наведении курсора */
+.combo-box:hover {
+    -fx-text-fill: black; /* Изменяем цвет текста при наведении на ComboBox */
+}
+
+/* Стили при клике */
+.combo-box:armed {
+    -fx-text-fill: black; /* Изменяем цвет текста при клике на ComboBox */
+}
+
