@@ -15,6 +15,10 @@
 
 <p><strong>Скурихин Александр</strong></p>
 
+
+<h2>Автор</h2>
+<p>Веб-сайт который работает вместе с данным приложением - <a href="https://github.com/Tufuteca/Graduate-Spring-Java">клик...</a></p>
+
 <h2>Лицензия</h2>
 
 <p>Этот проект лицензирован по лицензии <a href="https://opensource.org/licenses/MIT">MIT</a>.</p>
